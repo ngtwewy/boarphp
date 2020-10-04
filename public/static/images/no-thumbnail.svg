@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 200">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-自定义大小_1);
+      }
+
+      .cls-2 {
+        fill: #e5e3e3;
+        stroke: #707070;
+      }
+
+      .cls-3 {
+        fill: #707070;
+        font-size: 20px;
+        font-family: PingFangSC-Regular, PingFang SC;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-自定义大小_1">
+      <rect width="150" height="200"/>
+    </clipPath>
+  </defs>
+  <g id="自定义大小_1" data-name="自定义大小 – 1" class="cls-1">
+    <rect class="cls-6" width="150" height="200"/>
+    <g id="矩形_1" data-name="矩形 1" class="cls-2" transform="translate(-35 -16)">
+      <rect class="cls-4" width="227" height="242"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="226" height="241"/>
+    </g>
+    <text id="无缩略图" class="cls-3" transform="translate(37 86)"><tspan x="0" y="21">无缩略图</tspan></text>
+  </g>
+</svg>

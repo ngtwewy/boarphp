@@ -1,0 +1,23 @@
+.my-alert {
+    width: 300px;
+    height: 52px;
+    position: fixed;
+    top: 100px;
+    left: calc(50% - 150px);
+}
+.my-alert-hide {
+    animation: my-alert-hide-action 0.05s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes my-alert-hide-action {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+        /* top: -52px; */
+        transform: translateY(-152px) scale(0.8);
+    }
+}
+
+

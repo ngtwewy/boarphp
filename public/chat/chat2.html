@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html,body{padding: 0px; margin: 0px; font-size: 13px;}
+    section{padding: 10px;}
+    section p{font-size: 1px;}
+    input{ width: 300px; height: 20px;}
+    button{
+        height: 30px;
+        min-width: 100px;
+        margin-top: 20px;
+        float: left;
+        clear: both;
+    }
+    </style>
+    <script src="im.js"></script>
+</head>
+
+<body>
+    <section>
+        token ：<input type="text" name="token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODI5ODAyNDIsImV4cCI6MTU4MzA0MDI0MiwibmJmIjoxNTgyOTgwMjQyLCJ1c2VyX2lkIjoyfQ.jslo0zKCc96Az3hvAxTJIeCplIuPkvAiuh6GUQzBbBA"/><br><br>
+        touser：<input type="text" name="to" value="3"/>
+        <br><br>
+        <textarea id="text" cols="56" rows="2">月黑见渔灯，孤光一点萤。微微风簇浪，散作满河星。</textarea>
+        <br><br>
+
+        <button onclick="sendPrivateText()">发送文本消息 - privateText</button>
+        <button onclick="sendRecallMessage()">撤回消息 - recallMessage</button>
+        <button onclick="senfAddToBlackList()">拉黑聊天对象 - addToBlackList</button>
+        <button onclick="sendDeliveredMessage()">收到消息送达客户端回执 - deliveredMessage</button>
+        <button onclick="sendNoType()">未知消息类型</button>
+    </section>
+
+    <script>
+    PigIM.config.token = document.querySelector('input[name="token"]').value;
+    // PigIM.conn = PigIM.connection(PigIM.config);
+    PigIM.connection(PigIM.config);
+    PigIM.listen(PigIM.actions);
+    // window.conn  = PigIM.conn = PigIM.connection(PigIM.config);
+    // conn.listen(PigIM.actions);
+
+    // 发送 文本消息 - privateText
+    function sendPrivateText(){
+        var token   = document.querySelector('input[name="token"]').value;
+        var to      = document.querySelector('input[name="to"]').value;
+        var text    = document.querySelector("#text").value;
+        var json    = {
+            token:token,
+            messageType: 'privateText',
+            from:'2',
+            to:to,
+            message:text,
+            messageId:PigIM.utils.uuid()
+        }
+        PigIM.ws.send(JSON.stringify(json));
+    }
+
+
+
+    
+    // 发送 撤回消息 - recallMessage
+    function sendRecallMessage(){
+        console.log("// 发送 撤回消息 - recallMessage");
+        var token   = document.querySelector('input[name="token"]').value;
+        var json    = {
+            token:token,
+            messageType: 'privateText',
+            from:'2',
+            to:to,
+            message:text,
+            messageId:PigIM.utils.uuid()
+        }
+        conn.ws.send(JSON.stringify(json));
+    }
+    
+    // 发送 拉黑聊天对象 - addToBlackList
+    function senfAddToBlackList(){
+        console.log("// 发送 拉黑聊天对象 - addToBlackList");
+    }
+    
+    // 发送 收到消息送达客户端回执 - deliveredMessage
+    function sendDeliveredMessage(){
+        console.log("// 发送 收到消息送达客户端回执 - deliveredMessage");
+    }
+    
+    // 发送 未知消息类型
+    function sendNoType(){
+        console.log("// 发送 未知消息类型");
+        conn.ws.send("skr skr skr...");
+    }
+    </script>
+
+</body>
+
+</html>

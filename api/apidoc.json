@@ -1,0 +1,13 @@
+{
+    "name": "BoarPHP(野猪PHP)",
+    "version": "3.1.0",
+    "description": "BoarPHP(野猪PHP) BoarPHP(野猪PHP) 是一个基于 ThinkPHP5 开发遵循 RESTful API 设计风格的开发框架。BoarPHP 秉承快速、简单的开发理念，以便开发者快速构建自己的应用。",
+    "title": "BoarPHP(野猪PHP)",
+    "url" : "http://127.0.0.1:8081",
+  
+    "template":{
+      "forceLanguage":"zh_cn",
+      "withCompare":true,
+      "withGenerator":true
+    }
+  }

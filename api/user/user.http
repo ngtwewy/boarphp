@@ -1,0 +1,16 @@
+### 发送验证码
+POST http://localhost:8089/api/sendcode
+content-type: application/json; charset=utf-8
+
+{"account":"17796659321","length":6}
+
+
+### 修改密码
+PATCH http://localhost:8089/api/user/password
+content-type: application/json; charset=utf-8
+
+{
+    "account":"17796659321",
+    "password":"123456",
+    "verification_code":"403292"
+}

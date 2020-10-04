@@ -1,0 +1,787 @@
+2020-02-29 15:07:04 pid:3477 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:07:51 pid:3502 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:08:23 pid:3534 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:08:48 pid:3551 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:09:23 pid:3592 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:14:15 pid:3592 Workerman[server.php] stopping ...
+2020-02-29 15:14:15 pid:3592 Workerman[server.php] has been stopped
+2020-02-29 15:14:22 pid:3708 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:17:28 pid:3708 Workerman[server.php] stopping ...
+2020-02-29 15:17:28 pid:3708 Workerman[server.php] has been stopped
+2020-02-29 15:17:35 pid:3774 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:20:17 pid:3775 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #75)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#15 [internal function]: app\websocket\controller\Chat->__construct()
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#22 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#23 {main}
+2020-02-29 15:20:17 pid:3775 Worker[3775] process terminated
+2020-02-29 15:20:17 pid:3774 worker[none:3775] exit with status 64000
+2020-02-29 15:20:19 pid:3835 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:20:19 pid:3835 Worker[3835] process terminated
+2020-02-29 15:20:19 pid:3774 worker[none:3835] exit with status 64000
+2020-02-29 15:20:25 pid:3836 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #69)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:20:25 pid:3836 Worker[3836] process terminated
+2020-02-29 15:20:25 pid:3774 worker[none:3836] exit with status 64000
+2020-02-29 15:20:36 pid:3837 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #70)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:20:36 pid:3837 Worker[3837] process terminated
+2020-02-29 15:20:36 pid:3774 worker[none:3837] exit with status 64000
+2020-02-29 15:20:36 pid:3838 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #71)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:20:36 pid:3838 Worker[3838] process terminated
+2020-02-29 15:20:36 pid:3774 worker[none:3838] exit with status 64000
+2020-02-29 15:21:07 pid:3839 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #72)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:21:07 pid:3839 Worker[3839] process terminated
+2020-02-29 15:21:07 pid:3774 worker[none:3839] exit with status 64000
+2020-02-29 15:21:09 pid:3864 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #73)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:21:09 pid:3864 Worker[3864] process terminated
+2020-02-29 15:21:09 pid:3774 worker[none:3864] exit with status 64000
+2020-02-29 15:21:27 pid:3865 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:21:27 pid:3865 Worker[3865] process terminated
+2020-02-29 15:21:27 pid:3774 worker[none:3865] exit with status 64000
+2020-02-29 15:21:43 pid:3890 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #75)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:21:43 pid:3890 Worker[3890] process terminated
+2020-02-29 15:21:43 pid:3774 worker[none:3890] exit with status 64000
+2020-02-29 15:21:44 pid:3891 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #76)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:21:44 pid:3891 Worker[3891] process terminated
+2020-02-29 15:21:44 pid:3774 worker[none:3891] exit with status 64000
+2020-02-29 15:23:43 pid:3892 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(105): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #77)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(58): Workerman\Worker::runAll()
+#17 [internal function]: app\websocket\controller\Chat->__construct()
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#21 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#22 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#23 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#24 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#25 {main}
+2020-02-29 15:23:43 pid:3892 Worker[3892] process terminated
+2020-02-29 15:23:43 pid:3774 worker[none:3892] exit with status 64000
+2020-02-29 15:23:45 pid:3774 Workerman[server.php] stopping ...
+2020-02-29 15:23:45 pid:3774 Workerman[server.php] has been stopped
+2020-02-29 15:23:52 pid:3929 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:23:56 pid:3938 think\exception\PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table '8081.tp_user_token' doesn't exist in /Users/ice/htdocs/8081/thinkphp/library/think/db/Connection.php:385
+Stack trace:
+#0 /Users/ice/htdocs/8081/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#1 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`tp_user_token`')
+#2 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('tp_user_token', 'pk')
+#3 /Users/ice/htdocs/8081/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#4 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(98): think\db\Query->find()
+#5 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#14 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(51): Workerman\Worker::runAll()
+#15 [internal function]: app\websocket\controller\Chat->__construct()
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#22 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#23 {main}
+2020-02-29 15:23:56 pid:3938 Worker[3938] process terminated
+2020-02-29 15:23:56 pid:3929 worker[none:3938] exit with status 64000
+2020-02-29 15:30:40 pid:3929 Workerman[server.php] stopping ...
+2020-02-29 15:30:41 pid:3929 Workerman[server.php] has been stopped
+2020-02-29 15:30:48 pid:4003 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:31:34 pid:4003 Workerman[server.php] stopping ...
+2020-02-29 15:31:34 pid:4003 Workerman[server.php] has been stopped
+2020-02-29 15:31:41 pid:4040 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:39:29 pid:4040 Workerman[server.php] stopping ...
+2020-02-29 15:39:29 pid:4040 Workerman[server.php] has been stopped
+2020-02-29 15:39:37 pid:4245 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:40:20 pid:4245 Workerman[server.php] stopping ...
+2020-02-29 15:40:20 pid:4245 Workerman[server.php] has been stopped
+2020-02-29 15:40:27 pid:4273 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:43:10 pid:4273 Workerman[server.php] stopping ...
+2020-02-29 15:43:10 pid:4273 Workerman[server.php] has been stopped
+2020-02-29 15:43:16 pid:4300 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:43:17 pid:4301 think\exception\ErrorException: Cannot modify header information - headers already sent by (output started at /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:73) in /Users/ice/htdocs/8081/api/common.php:18
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'Cannot modify h...', '/Users/ice/htdo...', 18, Array)
+#1 /Users/ice/htdocs/8081/api/common.php(18): header('Content-type: t...')
+#2 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(97): p(Array)
+#3 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#12 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#13 [internal function]: app\websocket\controller\Chat->__construct()
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#17 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#19 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#20 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#21 {main}
+2020-02-29 15:43:17 pid:4301 Worker[4301] process terminated
+2020-02-29 15:43:17 pid:4300 worker[none:4301] exit with status 64000
+2020-02-29 15:43:19 pid:4302 think\exception\ErrorException: Cannot modify header information - headers already sent by (output started at /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:73) in /Users/ice/htdocs/8081/api/common.php:18
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'Cannot modify h...', '/Users/ice/htdo...', 18, Array)
+#1 /Users/ice/htdocs/8081/api/common.php(18): header('Content-type: t...')
+#2 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(97): p(Array)
+#3 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#14 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#15 [internal function]: app\websocket\controller\Chat->__construct()
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#22 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#23 {main}
+2020-02-29 15:43:19 pid:4302 Worker[4302] process terminated
+2020-02-29 15:43:19 pid:4300 worker[none:4302] exit with status 64000
+2020-02-29 15:43:20 pid:4303 think\exception\ErrorException: Cannot modify header information - headers already sent by (output started at /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:73) in /Users/ice/htdocs/8081/api/common.php:18
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'Cannot modify h...', '/Users/ice/htdo...', 18, Array)
+#1 /Users/ice/htdocs/8081/api/common.php(18): header('Content-type: t...')
+#2 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(97): p(Array)
+#3 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #69)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#12 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#13 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#14 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#15 [internal function]: app\websocket\controller\Chat->__construct()
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#19 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#22 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#23 {main}
+2020-02-29 15:43:20 pid:4303 Worker[4303] process terminated
+2020-02-29 15:43:20 pid:4300 worker[none:4303] exit with status 64000
+2020-02-29 15:43:25 pid:4300 Workerman[server.php] stopping ...
+2020-02-29 15:43:25 pid:4300 Workerman[server.php] has been stopped
+2020-02-29 15:43:32 pid:4305 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:43:36 pid:4306 think\exception\ErrorException: Cannot modify header information - headers already sent by (output started at /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:73) in /Users/ice/htdocs/8081/api/common.php:18
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'Cannot modify h...', '/Users/ice/htdo...', 18, Array)
+#1 /Users/ice/htdocs/8081/api/common.php(18): header('Content-type: t...')
+#2 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(97): p(Array)
+#3 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"messageType":...')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#11 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#12 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#13 [internal function]: app\websocket\controller\Chat->__construct()
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#17 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#18 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#19 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#20 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#21 {main}
+2020-02-29 15:43:36 pid:4306 Worker[4306] process terminated
+2020-02-29 15:43:36 pid:4305 worker[none:4306] exit with status 64000
+2020-02-29 15:47:49 pid:4305 Workerman[server.php] stopping ...
+2020-02-29 15:47:49 pid:4305 Workerman[server.php] has been stopped
+2020-02-29 15:47:56 pid:4326 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:49:35 pid:4326 Workerman[server.php] stopping ...
+2020-02-29 15:49:35 pid:4326 Workerman[server.php] has been stopped
+2020-02-29 15:49:41 pid:4363 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:51:07 pid:4363 Workerman[server.php] stopping ...
+2020-02-29 15:51:07 pid:4363 Workerman[server.php] has been stopped
+2020-02-29 15:51:14 pid:4382 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:55:03 pid:4382 Workerman[server.php] stopping ...
+2020-02-29 15:55:03 pid:4382 Workerman[server.php] has been stopped
+2020-02-29 15:55:10 pid:4456 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:56:02 pid:4465 think\exception\ErrorException: Undefined variable: response in /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:106
+Stack trace:
+#0 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(106): think\Error::appError(8, 'Undefined varia...', '/Users/ice/htdo...', 106, Array)
+#1 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #71)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#5 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#11 [internal function]: app\websocket\controller\Chat->__construct()
+#12 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#17 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#18 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#19 {main}
+2020-02-29 15:56:02 pid:4465 Worker[4465] process terminated
+2020-02-29 15:56:02 pid:4456 worker[none:4465] exit with status 64000
+2020-02-29 15:57:41 pid:4456 Workerman[server.php] stopping ...
+2020-02-29 15:57:41 pid:4456 Workerman[server.php] has been stopped
+2020-02-29 15:57:48 pid:4484 Workerman[server.php] start in DEBUG mode
+2020-02-29 15:58:31 pid:4484 Workerman[server.php] stopping ...
+2020-02-29 15:58:31 pid:4484 Workerman[server.php] has been stopped
+2020-02-29 15:58:37 pid:4504 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:01:45 pid:4504 Workerman[server.php] stopping ...
+2020-02-29 16:01:45 pid:4504 Workerman[server.php] has been stopped
+2020-02-29 16:01:52 pid:4549 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:27:45 pid:4549 Workerman[server.php] stopping ...
+2020-02-29 16:27:45 pid:4549 Workerman[server.php] has been stopped
+2020-02-29 16:27:52 pid:5058 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:29:21 pid:5059 think\exception\ErrorException: Undefined index: id in /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:123
+Stack trace:
+#0 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(123): think\Error::appError(8, 'Undefined index...', '/Users/ice/htdo...', 123, Array)
+#1 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #71)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#5 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#11 [internal function]: app\websocket\controller\Chat->__construct()
+#12 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#17 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#18 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#19 {main}
+2020-02-29 16:29:21 pid:5059 Worker[5059] process terminated
+2020-02-29 16:29:21 pid:5058 worker[none:5059] exit with status 64000
+2020-02-29 16:30:38 pid:5058 Workerman[server.php] stopping ...
+2020-02-29 16:30:38 pid:5058 Workerman[server.php] has been stopped
+2020-02-29 16:30:44 pid:5150 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:30:51 pid:5151 think\exception\ErrorException: Undefined index: id in /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:125
+Stack trace:
+#0 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(125): think\Error::appError(8, 'Undefined index...', '/Users/ice/htdo...', 125, Array)
+#1 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#5 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#11 [internal function]: app\websocket\controller\Chat->__construct()
+#12 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#17 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#18 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#19 {main}
+2020-02-29 16:30:51 pid:5151 Worker[5151] process terminated
+2020-02-29 16:30:51 pid:5150 worker[none:5151] exit with status 64000
+2020-02-29 16:31:29 pid:5150 Workerman[server.php] stopping ...
+2020-02-29 16:31:29 pid:5150 Workerman[server.php] has been stopped
+2020-02-29 16:31:36 pid:5170 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:31:39 pid:5171 think\exception\ErrorException: Undefined index: id in /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:125
+Stack trace:
+#0 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(125): think\Error::appError(8, 'Undefined index...', '/Users/ice/htdo...', 125, Array)
+#1 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#5 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#11 [internal function]: app\websocket\controller\Chat->__construct()
+#12 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#17 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#18 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#19 {main}
+2020-02-29 16:31:39 pid:5171 Worker[5171] process terminated
+2020-02-29 16:31:39 pid:5170 worker[none:5171] exit with status 64000
+2020-02-29 16:32:20 pid:5170 Workerman[server.php] stopping ...
+2020-02-29 16:32:20 pid:5170 Workerman[server.php] has been stopped
+2020-02-29 16:32:28 pid:5198 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:32:37 pid:5199 think\exception\ErrorException: Undefined index: id in /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:123
+Stack trace:
+#0 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(123): think\Error::appError(8, 'Undefined index...', '/Users/ice/htdo...', 123, Array)
+#1 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#5 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#11 [internal function]: app\websocket\controller\Chat->__construct()
+#12 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#17 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#18 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#19 {main}
+2020-02-29 16:32:37 pid:5199 Worker[5199] process terminated
+2020-02-29 16:32:37 pid:5198 worker[none:5199] exit with status 64000
+2020-02-29 16:33:16 pid:5198 Workerman[server.php] stopping ...
+2020-02-29 16:33:16 pid:5198 Workerman[server.php] has been stopped
+2020-02-29 16:33:23 pid:5226 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:33:27 pid:5227 think\exception\ErrorException: Undefined index: id in /Users/ice/htdocs/8081/api/websocket/controller/Chat.php:124
+Stack trace:
+#0 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(124): think\Error::appError(8, 'Undefined index...', '/Users/ice/htdo...', 124, Array)
+#1 [internal function]: app\websocket\controller\Chat->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ice/htdocs/8081/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /Users/ice/htdocs/8081/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#5 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#6 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1360): Workerman\Worker->run()
+#7 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ice/htdocs/8081/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /Users/ice/htdocs/8081/api/websocket/controller/Chat.php(64): Workerman\Worker::runAll()
+#11 [internal function]: app\websocket\controller\Chat->__construct()
+#12 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/ice/htdocs/8081/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\websocket\\c...')
+#14 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(580): think\Loader::controller('chat', 'controller', false, 'Error')
+#15 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#16 /Users/ice/htdocs/8081/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#17 /Users/ice/htdocs/8081/thinkphp/start.php(19): think\App::run()
+#18 /Users/ice/htdocs/8081/bin/server.php(14): require('/Users/ice/htdo...')
+#19 {main}
+2020-02-29 16:33:27 pid:5227 Worker[5227] process terminated
+2020-02-29 16:33:27 pid:5226 worker[none:5227] exit with status 64000
+2020-02-29 16:34:50 pid:5226 Workerman[server.php] stopping ...
+2020-02-29 16:34:50 pid:5226 Workerman[server.php] has been stopped
+2020-02-29 16:34:57 pid:5299 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:36:42 pid:5299 Workerman[server.php] stopping ...
+2020-02-29 16:36:42 pid:5299 Workerman[server.php] has been stopped
+2020-02-29 16:36:49 pid:5342 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:40:58 pid:5342 Workerman[server.php] stopping ...
+2020-02-29 16:40:58 pid:5342 Workerman[server.php] has been stopped
+2020-02-29 16:41:05 pid:5394 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:42:54 pid:5394 Workerman[server.php] stopping ...
+2020-02-29 16:42:54 pid:5394 Workerman[server.php] has been stopped
+2020-02-29 16:43:00 pid:5431 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:47:34 pid:5431 Workerman[server.php] stopping ...
+2020-02-29 16:47:34 pid:5431 Workerman[server.php] has been stopped
+2020-02-29 16:47:40 pid:5554 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:55:35 pid:5554 Workerman[server.php] stopping ...
+2020-02-29 16:55:35 pid:5554 Workerman[server.php] has been stopped
+2020-02-29 16:55:42 pid:5699 Workerman[server.php] start in DEBUG mode
+2020-02-29 16:58:03 pid:5699 Workerman[server.php] stopping ...
+2020-02-29 16:58:03 pid:5699 Workerman[server.php] has been stopped
+2020-02-29 16:58:11 pid:5734 Workerman[server.php] start in DEBUG mode
+2020-02-29 17:00:37 pid:5734 Workerman[server.php] stopping ...
+2020-02-29 17:00:37 pid:5734 Workerman[server.php] has been stopped
+2020-02-29 17:00:50 pid:5769 Workerman[server.php] start in DEBUG mode
+2020-02-29 17:54:26 pid:5769 Workerman[server.php] stopping ...
+2020-02-29 17:54:26 pid:5769 Workerman[server.php] has been stopped
+2020-02-29 17:55:35 pid:7610 Workerman[server.php] start in DEBUG mode
+2020-02-29 18:01:33 pid:7610 Workerman[server.php] stopping ...
+2020-02-29 18:01:33 pid:7610 Workerman[server.php] has been stopped
+2020-02-29 18:01:54 pid:7731 Workerman[server.php] start in DEBUG mode
+2020-02-29 18:10:18 pid:7731 Workerman[server.php] stopping ...
+2020-02-29 18:10:18 pid:7731 Workerman[server.php] has been stopped
+2020-02-29 18:10:43 pid:7825 Workerman[server.php] start in DEBUG mode
+2020-02-29 18:13:46 pid:7825 Workerman[server.php] stopping ...
+2020-02-29 18:13:46 pid:7825 Workerman[server.php] has been stopped
+2020-02-29 19:14:43 pid:8014 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:15:49 pid:8014 Workerman[server.php] stopping ...
+2020-02-29 19:15:49 pid:8014 Workerman[server.php] has been stopped
+2020-02-29 19:16:48 pid:8068 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:16:54 pid:8068 Workerman[server.php] stopping ...
+2020-02-29 19:16:54 pid:8068 Workerman[server.php] has been stopped
+2020-02-29 19:21:38 pid:8170 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:23:11 pid:8170 Workerman[server.php] stopping ...
+2020-02-29 19:23:11 pid:8170 Workerman[server.php] has been stopped
+2020-02-29 19:24:26 pid:8277 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:24:29 pid:8277 Workerman[server.php] stopping ...
+2020-02-29 19:24:29 pid:8277 Workerman[server.php] has been stopped
+2020-02-29 19:25:15 pid:8303 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:25:34 pid:8303 Workerman[server.php] stopping ...
+2020-02-29 19:25:34 pid:8303 Workerman[server.php] has been stopped
+2020-02-29 19:27:03 pid:8331 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:27:34 pid:8331 Workerman[server.php] stopping ...
+2020-02-29 19:27:34 pid:8331 Workerman[server.php] has been stopped
+2020-02-29 19:27:43 pid:8349 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:28:15 pid:8349 Workerman[server.php] stopping ...
+2020-02-29 19:28:15 pid:8349 Workerman[server.php] has been stopped
+2020-02-29 19:29:52 pid:8375 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:33:27 pid:8375 Workerman[server.php] stopping ...
+2020-02-29 19:33:27 pid:8375 Workerman[server.php] has been stopped
+2020-02-29 19:34:00 pid:8439 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:35:12 pid:8439 Workerman[server.php] stopping ...
+2020-02-29 19:35:12 pid:8439 Workerman[server.php] has been stopped
+2020-02-29 19:36:03 pid:8516 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:46:30 pid:8516 Workerman[server.php] stopping ...
+2020-02-29 19:46:30 pid:8516 Workerman[server.php] has been stopped
+2020-02-29 19:47:11 pid:9123 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:47:30 pid:9123 Workerman[server.php] stopping ...
+2020-02-29 19:47:31 pid:9123 Workerman[server.php] has been stopped
+2020-02-29 19:51:01 pid:9170 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:52:17 pid:9170 Workerman[server.php] stopping ...
+2020-02-29 19:52:17 pid:9170 Workerman[server.php] has been stopped
+2020-02-29 19:52:41 pid:9196 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:53:59 pid:9196 Workerman[server.php] stopping ...
+2020-02-29 19:53:59 pid:9196 Workerman[server.php] has been stopped
+2020-02-29 19:54:07 pid:9222 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:54:24 pid:9222 Workerman[server.php] stopping ...
+2020-02-29 19:54:24 pid:9222 Workerman[server.php] has been stopped
+2020-02-29 19:54:59 pid:9224 Workerman[server.php] start in DEBUG mode
+2020-02-29 19:55:03 pid:9224 Workerman[server.php] stopping ...
+2020-02-29 19:55:03 pid:9224 Workerman[server.php] has been stopped
+2020-02-29 19:57:31 pid:9285 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:00:39 pid:9285 Workerman[server.php] stopping ...
+2020-02-29 20:00:39 pid:9285 Workerman[server.php] has been stopped
+2020-02-29 20:00:54 pid:9544 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:11:22 pid:9544 Workerman[server.php] stopping ...
+2020-02-29 20:11:22 pid:9544 Workerman[server.php] has been stopped
+2020-02-29 20:11:56 pid:9954 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:18:19 pid:9954 Workerman[server.php] stopping ...
+2020-02-29 20:18:19 pid:9954 Workerman[server.php] has been stopped
+2020-02-29 20:18:26 pid:10179 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:22:11 pid:10179 Workerman[server.php] stopping ...
+2020-02-29 20:22:11 pid:10179 Workerman[server.php] has been stopped
+2020-02-29 20:23:01 pid:10304 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:23:29 pid:10304 Workerman[server.php] stopping ...
+2020-02-29 20:23:29 pid:10304 Workerman[server.php] has been stopped
+2020-02-29 20:25:23 pid:10340 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:25:38 pid:10340 Workerman[server.php] stopping ...
+2020-02-29 20:25:39 pid:10340 Workerman[server.php] has been stopped
+2020-02-29 20:28:16 pid:10379 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:28:34 pid:10379 Workerman[server.php] stopping ...
+2020-02-29 20:28:34 pid:10379 Workerman[server.php] has been stopped
+2020-02-29 20:29:00 pid:10381 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:39:47 pid:10381 Workerman[server.php] stopping ...
+2020-02-29 20:39:47 pid:10381 Workerman[server.php] has been stopped
+2020-02-29 20:45:59 pid:11457 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:47:59 pid:11457 Workerman[server.php] stopping ...
+2020-02-29 20:47:59 pid:11457 Workerman[server.php] has been stopped
+2020-02-29 20:48:06 pid:11463 Workerman[server.php] start in DEBUG mode
+2020-02-29 20:51:40 pid:11463 Workerman[server.php] stopping ...
+2020-02-29 20:51:40 pid:11463 Workerman[server.php] has been stopped
+2020-02-29 20:53:56 pid:11590 Workerman[server.php] start in DEBUG mode
